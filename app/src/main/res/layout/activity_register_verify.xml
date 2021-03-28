@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.dlsd.property.view.CustomTitleBar
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_icon="@drawable/btn_back"
+            app:right_icon="@drawable/btn_more_gray"
+            app:titlebar_type="12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="58dp"
+            android:text="请输入验证码"
+            android:textColor="@color/txt_color_3"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:id="@+id/lly_change_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/tv_send_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:text="请输入 13921154751 收到的验证码"
+                android:textColor="@color/txt_color_6"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="更换手机号"
+                android:textColor="@color/theme_txt_color"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+
+
+        <com.github.gongw.VerifyCodeView
+            android:id="@+id/vcv_code"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginRight="50dp"
+            app:vcDividerWidth="8dp"
+            app:vcNextWrapperColor="@color/txt_color_3"
+            app:vcTextColor="@color/txt_color_3"
+            app:vcTextCount="6"
+            app:vcTextSize="30dp"
+            app:vcWrapper="square"
+            app:vcWrapperColor="@color/line_color"
+            app:vcWrapperStrokeWidth="1dp" />
+
+        <LinearLayout
+            android:id="@+id/lly_wait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="25dp">
+
+            <TextView
+                android:id="@+id/tv_wait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证码已发送(60)"
+                android:textColor="@color/txt_color_9"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="可能有延时，请耐心等待…"
+                android:textColor="@color/txt_color_9"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lly_resend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="25dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_resend_vc"
+                android:gravity="center"
+                android:text="重新发送验证码"
+                android:textColor="@color/theme_txt_color"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="28dp"
+            android:background="@drawable/bg_theme"
+            android:text="确  认"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+</layout>

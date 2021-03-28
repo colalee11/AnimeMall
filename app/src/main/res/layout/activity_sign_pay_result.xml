@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.dlsd.property.view.CustomTitleBar
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_icon="@drawable/btn_back"
+            app:right_icon="@drawable/btn_more_gray"
+            app:right_text=""
+            app:title="支付结果"
+            app:titlebar_type="10" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_result"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="90dp"
+                android:src="@drawable/pay_check_symbol" />
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="支付成功"
+                android:textColor="@color/txt_base"
+                android:textSize="24dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/txt_color_6"
+                android:textSize="13dp" />
+
+
+            <Button
+                android:id="@+id/btn_home"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_pay_result"
+                android:text="首页"
+                android:textColor="@color/theme_txt_color"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

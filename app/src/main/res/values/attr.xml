@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTitleBar">
+        <attr name="title" format="string"/>
+        <attr name="left_icon" format="reference"/>
+        <attr name="right_icon" format="reference"/>
+        <attr name="title_text_color" format="reference"/>
+        <attr name="right_text" format="string"/>
+        <attr name="titlebar_type" format="integer"/>
+        <attr name="show_back" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RatingBar">
+        <!--星星间距-->
+        <attr name="starDistance" format="dimension" />
+        <!--星星大小-->
+        <attr name="starSize" format="dimension" />
+        <!--星星个数-->
+        <attr name="starCount" format="integer" />
+        <!--星星空图-->
+        <attr name="starEmpty" format="reference" />
+        <!--星星满图-->
+        <attr name="starFill" format="reference" />
+        <!--是否允许修改-->
+        <attr name="canEdit" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="StatusBarHeightView">
+        <attr name="use_type" format="integer">
+            <enum name="use_height" value="0" />
+            <enum name="use_padding_top" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CirclePageIndicator">
+        <!-- Whether or not the indicators should be centered. -->
+        <!-- 指示器是否居中显示 -->
+        <attr name="centered" format="boolean" />
+        <!-- Color of the filled circle that represents the current page. -->
+        <!-- 当前页面指示器颜色 -->
+        <attr name="selectColor" format="color"/>
+        <!-- Color of the filled circles that represents pages. -->
+        <!-- 全部页面指示器颜色 -->
+        <attr name="pageColor" format="color"/>
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <!-- 指示器半径 -->
+        <attr name="radius" format="dimension"/>
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <!-- 指示器是否锁定位置 -->
+        <attr name="snap" format="boolean"/>
+        <!-- Color of the open circles. -->
+        <!-- 全部页面指示器空心圆边框颜色 -->
+        <attr name="strokeColor" format="color"/>
+        <!-- Width of the stroke used to draw the circles. -->
+        <!-- 全部页面指示器空心圆边框宽度 -->
+        <attr name="strokeWidth" format="dimension" />
+        <!-- View background -->
+        <!-- 页面指示器背景 -->
+        <attr name="android:background"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dlsd.property">
+
+    <uses-permission android:name="com.dlsd.property.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature android:name="android.hardware.nfc.hce" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" /> <!-- 音视频需要网络权限 和 监听网络状态权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 摄像头采集需要 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 音频采集需要 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activitys.buy.AllOrderActivity"></activity>
+        <activity android:name=".activitys.buy.OrderWaitSendListActivity" />
+        <activity android:name=".wxapi.PayActivity" />
+        <activity android:name=".wxapi.PayResultActivity" />
+        <activity android:name=".activitys.detail.BuyOrderDetailActivity" />
+        <activity android:name=".activitys.detail.ConfirmOrderDetailActivity" />
+        <activity android:name=".guard.activitys.GoodsByTypeActivity" />
+        <activity android:name=".guard.activitys.GoodsEditActivity" />
+        <activity android:name=".guard.activitys.GoodsDetailActivity" />
+        <activity android:name=".guard.activitys.GoodsManagerActivity" />
+        <activity android:name=".guard.activitys.AddTypeActivity" />
+        <activity android:name=".guard.activitys.GoodsTypeManagerActivity" />
+        <activity android:name=".guard.activitys.AddGoodsActivity" />
+        <activity android:name=".activitys.base.UserInfoActivity" />
+        <activity android:name=".guard.activitys.GuardMainActivity" />
+        <activity android:name=".activitys.sign.SignPayResultActivity" />
+        <activity android:name=".activitys.buy.OrderListActivity" />
+        <activity android:name=".activitys.setting.SettingActivity" />
+        <activity
+            android:name=".activitys.address.EditAddressActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitys.address.AddAddressActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activitys.address.AddressListActivity" />
+        <activity android:name=".activitys.address.AddressManagerActivity" />
+        <activity
+            android:name=".activitys.base.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activitys.base.GuideActivity" />
+        <activity android:name=".activitys.base.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".base.BaseActivity" />
+        <activity
+            android:name=".activitys.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activitys.base.RegisterNextActivity" />
+        <activity android:name=".activitys.base.RegisterSetPwdActivity" />
+        <activity android:name=".activitys.base.RegisterVerifyActivity" />
+        <activity android:name=".activitys.base.ForgetPwdActivity" />
+        <activity android:name=".activitys.base.ResetPwdActivity" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx2c79dd665e273360" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.dlsd.property.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="com.dlsd.property.BmobContentProvider" />
+    </application>
+
+</manifest>

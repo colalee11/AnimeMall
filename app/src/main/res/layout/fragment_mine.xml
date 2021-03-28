@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/lly_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f5f5"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/sv_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f7f7f7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f7f7f7"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rly_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="214dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/mine_bg" />
+
+                    <com.dlsd.property.view.StatusBarHeightView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="vertical"
+                        app:use_type="use_padding_top">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:id="@+id/lly_user_info"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_marginTop="24dp"
+                                    android:orientation="horizontal">
+
+                                    <com.dlsd.property.view.CircleImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/header_user_man" />
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tv_phone"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="5dp"
+                                            android:text="***********"
+                                            android:textColor="@color/white"
+                                            android:textSize="18dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_mood"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:text=""
+                                            android:textColor="@color/white"
+                                            android:textSize="13dp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/iv_edit"
+                                    android:layout_width="41dp"
+                                    android:layout_height="41dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/btn_edit_white" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lly_clinic_order"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="140dp"
+                                android:layout_marginRight="8dp"
+                                android:background="@drawable/border_shadow_main"
+                                android:orientation="vertical"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="15dp"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="全部订单"
+                                        android:textColor="@color/txt_color_3"
+                                        android:textSize="14dp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/rly_info"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/lly_clinic_all"
+                                        style="@style/mine_item_lly">
+
+                                        <RelativeLayout style="@style/mine_item_icon_rly">
+
+                                            <ImageView
+                                                style="@style/mine_item_icon"
+                                                android:src="@drawable/user_wz_dzf" />
+
+                                            <TextView
+                                                android:id="@+id/tv_clinic_all"
+                                                style="@style/mine_item_unread" />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            style="@style/mine_item_txt"
+                                            android:text="全部" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lly_clinic_dfk"
+                                        style="@style/mine_item_lly">
+
+                                        <RelativeLayout style="@style/mine_item_icon_rly">
+
+                                            <ImageView
+                                                style="@style/mine_item_icon"
+                                                android:src="@drawable/user_wz_tk" />
+
+                                            <TextView
+                                                android:id="@+id/tv_clinic_dfk"
+                                                style="@style/mine_item_unread" />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            style="@style/mine_item_txt"
+                                            android:text="待付款" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lly_clinic_dfh"
+                                        style="@style/mine_item_lly">
+
+                                        <RelativeLayout style="@style/mine_item_icon_rly">
+
+                                            <ImageView
+                                                style="@style/mine_item_icon"
+                                                android:src="@drawable/user_wz_yzd" />
+
+                                            <TextView
+                                                android:id="@+id/tv_clinic_dfh"
+                                                style="@style/mine_item_unread" />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            style="@style/mine_item_txt"
+                                            android:text="待发货" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lly_clinic_dsh"
+                                        style="@style/mine_item_lly">
+
+                                        <RelativeLayout style="@style/mine_item_icon_rly">
+
+                                            <ImageView
+                                                style="@style/mine_item_icon"
+                                                android:src="@drawable/user_wz_yzd" />
+
+                                            <TextView
+                                                android:id="@+id/tv_clinic_dsh"
+                                                style="@style/mine_item_unread" />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            style="@style/mine_item_txt"
+                                            android:text="待收货" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lly_clinic_ywc"
+                                        style="@style/mine_item_lly">
+
+                                        <RelativeLayout style="@style/mine_item_icon_rly">
+
+                                            <ImageView
+                                                style="@style/mine_item_icon"
+                                                android:src="@mipmap/finish" />
+
+                                            <TextView
+                                                android:id="@+id/tv_clinic_ywc"
+                                                style="@style/mine_item_unread" />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            style="@style/mine_item_txt"
+                                            android:text="已完成" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </com.dlsd.property.view.StatusBarHeightView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/border_shadow_main"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/lly_patient_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            style="@style/mine_item_icon"
+                            android:src="@drawable/mine_list_wdsc" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:text="我的信息"
+                            android:textColor="@color/txt_color_3"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/right_point" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F7F7F7" />
+
+                    <LinearLayout
+                        android:id="@+id/lly_address_manager"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/mine_item_icon"
+                            android:src="@drawable/mine_list_dzgl" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:text="地址管理"
+                            android:textColor="@color/txt_color_3"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/right_point" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

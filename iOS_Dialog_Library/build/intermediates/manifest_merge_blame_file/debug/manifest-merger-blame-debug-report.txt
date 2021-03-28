@@ -1,0 +1,29 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="zhangphil.iosdialog"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6    <!--
+7    <application
+8        android:allowBackup="true"
+9        android:icon="@drawable/app_icon"
+10        android:label="@string/app_name"
+11        android:theme="@style/AppTheme" >
+12        <activity
+13            android:name="zhangphil.iosdialog.MainActivity"
+14            android:label="@string/app_name" >
+15            <intent-filter>
+16                <action android:name="android.intent.action.MAIN" />
+17
+18                <category android:name="android.intent.category.LAUNCHER" />
+19            </intent-filter>
+20        </activity>
+21    </application>
+22    -->
+23    <uses-sdk
+24        android:minSdkVersion="16"
+24-->D:\Desktop\ShopApp\AnimeMall\iOS_Dialog_Library\src\main\AndroidManifest.xml
+25        android:targetSdkVersion="25" />
+25-->D:\Desktop\ShopApp\AnimeMall\iOS_Dialog_Library\src\main\AndroidManifest.xml
+26
+27</manifest>

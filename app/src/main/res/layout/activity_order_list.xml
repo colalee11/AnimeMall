@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/lly_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_color"
+        android:orientation="vertical">
+
+        <com.dlsd.property.view.CustomTitleBar
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_icon="@drawable/btn_back_white"
+            app:right_icon="@drawable/btn_more_gray"
+            app:right_text=""
+            app:show_back="true"
+            app:title="订单"
+            app:title_text_color="@color/white"
+            app:titlebar_type="12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/tv_all"
+                style="@style/order_item"
+                android:text="全部"
+                android:textColor="@color/theme_txt_color" />
+
+            <TextView
+                android:id="@+id/tv_dfk"
+                style="@style/order_item"
+                android:text="待付款" />
+
+            <TextView
+                android:id="@+id/tv_dfh"
+                style="@style/order_item"
+                android:text="待发货" />
+
+            <TextView
+                android:id="@+id/tv_dsh"
+                style="@style/order_item"
+                android:text="待收货" />
+
+            <TextView
+                android:id="@+id/tv_ywc"
+                style="@style/order_item"
+                android:text="已完成" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f5f5f5" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F5F5F5" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/lly_none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/icon_none" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无订单"
+                android:textColor="@color/txt_color_9"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone">
+
+
+            <Button
+                android:id="@+id/btn_chat"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_margin="23dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_confirm"
+                android:drawablePadding="1dp"
+                android:gravity="center"
+                android:text="聊天室入口"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+
+            <Button
+                android:id="@+id/btn_video"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_margin="23dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_confirm"
+                android:drawablePadding="1dp"
+                android:gravity="center"
+                android:text="视频问诊入口"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

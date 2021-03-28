@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.dlsd.property.view.CustomTitleBar
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_icon="@drawable/btn_back"
+            app:right_icon="@drawable/btn_more_gray"
+            app:titlebar_type="12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="58dp"
+            android:text="手机号注册"
+            android:textColor="@color/txt_color_3"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:id="@+id/lly_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:text="有账号?"
+                android:textColor="@color/txt_color_6"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="立即登录"
+                android:textColor="@color/theme_txt_color"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="28dp"
+            android:background="@drawable/border_gray_r25">
+
+            <com.dlsd.property.view.ClearEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:drawableEnd="@drawable/clear_edit"
+                android:hint="手机号"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingLeft="20dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/txt_color_3"
+                android:textColorHint="@color/txt_color_9"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="28dp"
+            android:background="@drawable/bg_theme"
+            android:text="同意协议并注册"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+
+        <LinearLayout
+            android:id="@+id/lly_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:text="已阅读并同意"
+                android:textColor="@color/txt_color_6"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="平台协议"
+                android:textColor="@color/theme_txt_color"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

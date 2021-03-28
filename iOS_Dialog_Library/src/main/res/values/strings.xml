@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IOSDialog</string>
+    <string name="dialog_invoice_choose">选择票据</string>
+    <string name="dialog_invoice_e">电子票据</string>
+    <string name="dialog_invoice_paper">纸质票据</string>
+    <string name="dialog_invoice_no">暂不需要</string>
+</resources>

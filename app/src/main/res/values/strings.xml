@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">日用百货商城</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="doc_notice">1</string>
+    <string name="user_notice">用户及用户注册：\n        用户必须是具备完全民事行为能力的自然人，或者是具有合法经营资格的实体组织。无民事行为能力人、限制民事行为能力人以及无经营或特定经营资格的组织不当注册为淘宝用户或超过其民事权利或行为能力范围从事交易的，其与淘宝之间的服务协议自始无效，淘宝一经发现，有权立即注销该用户，并追究其使用淘宝网“服务”的一切法律责任。用户注册是指用户登陆淘宝网，并按要求填写相关信息并确认同意履行相关用户协议的过程。用户因进行交易、获取有偿服务或接触淘宝网服务器而发生的所有应纳税赋，以及一切硬件、软件、服务及其它方面的费用均由用户负责支付。淘宝网站仅作为交易地点。淘宝仅作为用户物色交易对象，就货物和服务的交易进行协商，以及获取各类与贸易相关的服务的地点。淘宝不能控制交易所涉及的物品</string>
+    <string name="error_msg">网络异常，请切换网络重试</string>
+</resources>
