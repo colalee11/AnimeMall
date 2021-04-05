@@ -20,7 +20,7 @@ public class Constants {
     //融云AppKey  融云开发者后台创建的应用的 AppKey
     public static final String RONGYUN_APP_KEY = "p5tvi9dspqf74";
 
-    //挂号成功的KEY     value 1成功   0失败
+    //成功的KEY     value 1成功   0失败
     public static final String REGISTERED_RESULT = "registered_result";
 
     public static final String BMOB_ID = "b470136565f232cc33d9645fe95434df";

@@ -146,7 +146,7 @@
 
                                             <ImageView
                                                 style="@style/mine_item_icon"
-                                                android:src="@drawable/user_wz_dzf" />
+                                                android:src="@mipmap/all" />
 
                                             <TextView
                                                 android:id="@+id/tv_clinic_all"
@@ -167,7 +167,7 @@
 
                                             <ImageView
                                                 style="@style/mine_item_icon"
-                                                android:src="@drawable/user_wz_tk" />
+                                                android:src="@mipmap/daifukuan" />
 
                                             <TextView
                                                 android:id="@+id/tv_clinic_dfk"
@@ -188,7 +188,7 @@
 
                                             <ImageView
                                                 style="@style/mine_item_icon"
-                                                android:src="@drawable/user_wz_yzd" />
+                                                android:src="@mipmap/daifahuo" />
 
                                             <TextView
                                                 android:id="@+id/tv_clinic_dfh"
@@ -209,7 +209,7 @@
 
                                             <ImageView
                                                 style="@style/mine_item_icon"
-                                                android:src="@drawable/user_wz_yzd" />
+                                                android:src="@mipmap/daishouhuo" />
 
                                             <TextView
                                                 android:id="@+id/tv_clinic_dsh"
@@ -230,7 +230,7 @@
 
                                             <ImageView
                                                 style="@style/mine_item_icon"
-                                                android:src="@mipmap/finish" />
+                                                android:src="@mipmap/finshall" />
 
                                             <TextView
                                                 android:id="@+id/tv_clinic_ywc"

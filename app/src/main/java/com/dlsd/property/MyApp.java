@@ -6,7 +6,6 @@ import androidx.multidex.MultiDexApplication;
 
 import com.dlsd.property.constant.Constants;
 import com.dlsd.property.db.User;
-import com.dlsd.property.models.UserLoginModel;
 import com.dlsd.property.utils.AppLoginUtil;
 
 import cn.bmob.v3.Bmob;
@@ -23,6 +22,7 @@ public class MyApp extends MultiDexApplication {
         super.onCreate();
         instance = this;
         MyApp.context = getApplicationContext();
+        //初始化Bmob
         Bmob.initialize(this, Constants.BMOB_ID);
         //设置推送
         if (AppLoginUtil.hasLogin()) {

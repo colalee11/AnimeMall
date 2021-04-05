@@ -16,8 +16,7 @@ import com.dlsd.property.db.BusGoods;
 import java.util.ArrayList;
 
 /**
- *
- * Describe:
+ * Describe:购物车适配器
  */
 public class GoodGroupAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

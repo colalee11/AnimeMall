@@ -48,9 +48,9 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
     protected void initView() {
         setStatusBarDarkTheme(this, false);
         mGoods = (Goods) getIntent().getSerializableExtra("goods");
-        mBannerUrl.add(R.drawable.test);
-        mBannerUrl.add(R.drawable.test);
-        mBannerUrl.add(R.drawable.test);
+        mBannerUrl.add(R.mipmap.tishi);
+        mBannerUrl.add(R.mipmap.tishi);
+        mBannerUrl.add(R.mipmap.tishi);
         binding.banner.setImages(mBannerUrl).setImageLoader(new ImgBanner())
                 .setBannerStyle(BannerConfig.CIRCLE_INDICATOR)
                 .setBannerAnimation(Transformer.Default)
@@ -88,7 +88,7 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
         binding.tvBus.setOnClickListener(this);
         binding.tvBuy.setOnClickListener(this);
         mGoods.setGoodsSeeCount(mGoods.getGoodsSeeCount() + 1);
-        mGoods.update(mGoods.getObjectId(), new UpdateListener() {
+        mGoods.update(mGoods.getObjectId(), new UpdateListener() {//更新数据
             @Override
             public void done(BmobException e) {
                 if (null == e) {
@@ -98,6 +98,7 @@ public class GoodsDetailActivity extends BaseActivity implements View.OnClickLis
                 }
             }
         });
+        //判断是否为管理员
         if (mUser.getRole() == 0) {
             binding.llyManager.setVisibility(View.VISIBLE);
             binding.llyUser.setVisibility(View.GONE);

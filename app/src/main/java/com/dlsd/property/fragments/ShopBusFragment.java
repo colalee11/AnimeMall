@@ -62,7 +62,7 @@ public class ShopBusFragment extends BaseFragment implements View.OnClickListene
             public void onItemDetailClicked(GoodGroupAdapter adapter, int position) {
 
             }
-
+            //商品是否选中
             @Override
             public void onItemCheckClicked(int position) {
                 if (mBusDatas.get(position).isCheck()) {
@@ -74,11 +74,13 @@ public class ShopBusFragment extends BaseFragment implements View.OnClickListene
                 totleFee();
             }
 
+            //长按删除商品
             @Override
             public void onItemLongClicked(int gPostion, int position) {
                 showDeleteDialog(mBusDatas.get(position));
             }
 
+            //商品数量加一
             @Override
             public void onItemAddClicked(int position) {
                 mBusDatas.get(position).setCount(mBusDatas.get(position).getCount() + 1);
@@ -93,6 +95,7 @@ public class ShopBusFragment extends BaseFragment implements View.OnClickListene
                 });
             }
 
+            //商品数量减一
             @Override
             public void onItemSubClicked(int position) {
                 if (mBusDatas.get(position).getCount() > 1) {
@@ -106,7 +109,7 @@ public class ShopBusFragment extends BaseFragment implements View.OnClickListene
                             }
                         }
                     });
-                }else {
+                } else {
                     showDeleteDialog(mBusDatas.get(position));
                 }
             }
@@ -120,7 +123,7 @@ public class ShopBusFragment extends BaseFragment implements View.OnClickListene
         mBinding.tvConfirm.setOnClickListener(this);
     }
 
-    public void setRefresh(){
+    public void setRefresh() {
         getBus();
     }
 
@@ -128,6 +131,7 @@ public class ShopBusFragment extends BaseFragment implements View.OnClickListene
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_all_check:
+                //是否全选
                 if (isAllCheck) {
                     for (BusGoods bus : mBusDatas) {
                         bus.setCheck(false);
@@ -176,6 +180,11 @@ public class ShopBusFragment extends BaseFragment implements View.OnClickListene
         getBus();
     }
 
+    /**
+     * 删除商品数量提示框
+     *
+     * @param busGoods
+     */
     private void showDeleteDialog(BusGoods busGoods) {
         AlertDialog dialog = new AlertDialog(getActivity()).builder();
         dialog.setTitle("温馨提示")
@@ -193,6 +202,10 @@ public class ShopBusFragment extends BaseFragment implements View.OnClickListene
                 }).show();
     }
 
+    /*
+     *合计选中商品价格
+     *
+     */
     private void totleFee() {
         BigDecimal totle = new BigDecimal("0");
         for (BusGoods bus : mBusDatas) {
@@ -206,17 +219,19 @@ public class ShopBusFragment extends BaseFragment implements View.OnClickListene
         mBinding.tvTotlePrice.setText("¥ " + b.toPlainString());
     }
 
-
+    /**
+     * 获得总共宝贝数量
+     */
     private void getBus() {
         BmobQuery<BusGoods> query = new BmobQuery<BusGoods>();
-        query.include("goods,user");
-        query.findObjects(new FindListener<BusGoods>() {
+        query.include("goods,user");//关联查询
+        query.findObjects(new FindListener<BusGoods>() {//查询购物车多条数据
             @Override
             public void done(List<BusGoods> object, BmobException e) {
                 if (e == null) {
                     mBusDatas.clear();
                     if (object.size() > 0) {
-                        mBusDatas.addAll(object);
+                        mBusDatas.addAll(object);//添加数据
                     }
                     for (BusGoods bus : mBusDatas) {
                         bus.setCheck(false);
@@ -224,12 +239,17 @@ public class ShopBusFragment extends BaseFragment implements View.OnClickListene
                     mBinding.tvTotleGoods.setText("共" + mBusDatas.size() + "件宝贝");
                     goodGroupAdapter.notifyDataSetChanged();
                 } else {
-                   // showToast(getString(R.string.error_msg));
+                    // showToast(getString(R.string.error_msg));
                 }
             }
         });
     }
 
+    /**
+     * 删除商品数量
+     *
+     * @param busGoods
+     */
     private void deleteBusGoods(BusGoods busGoods) {
         busGoods.delete(new UpdateListener() {
             @Override
