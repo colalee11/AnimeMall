@@ -7,7 +7,7 @@ import android.os.Handler;
 import com.dlsd.property.R;
 import com.dlsd.property.activitys.MainActivity;
 import com.dlsd.property.base.BaseActivity;
-import com.dlsd.property.guard.activitys.GuardMainActivity;
+import com.dlsd.property.merchants.activitys.GuardMainActivity;
 import com.dlsd.property.utils.AppLoginUtil;
 import com.dlsd.property.utils.SPUtil;
 

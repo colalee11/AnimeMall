@@ -18,7 +18,7 @@ import com.dlsd.property.base.AppManager;
 import com.dlsd.property.base.BaseActivity;
 import com.dlsd.property.databinding.ActivityLoginBinding;
 import com.dlsd.property.db.User;
-import com.dlsd.property.guard.activitys.GuardMainActivity;
+import com.dlsd.property.merchants.activitys.GuardMainActivity;
 import com.dlsd.property.utils.SPUtil;
 
 import java.util.ArrayList;

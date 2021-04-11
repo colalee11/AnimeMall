@@ -120,7 +120,7 @@ public class OkHttpManager {
             public void onResponse(Call call, Response response) throws IOException {
                 callBack.onResponse(response);
                 String result = response.body().string();
-                Log.e("lsh", "onResponse = " + result);
+                Log.e("ljh", "onResponse = " + result);
                 writeFile("url = " + response.toString() + "\r\n" + "onResponse = " + result);
                 if (response.isSuccessful()) {
 
@@ -175,7 +175,7 @@ public class OkHttpManager {
                     url += sb.toString();
                 }
             }
-            Log.e("lsh", "" + url);
+            Log.e("ljh", "" + url);
             writeFile("onRequest = " + url);
             builder.url(url);
             builder.get();
@@ -184,13 +184,13 @@ public class OkHttpManager {
             RequestBody requestBody;
             if (null != type && type.equals("json")) {
                 String p = mGson.toJson(params);
-                Log.e("lsh", "" + p);
+                Log.e("ljh", "" + p);
                 writeFile("onRequest = " + p);
                 MediaType JSON = MediaType.parse("application/json; charset=utf-8");
                 requestBody = RequestBody.create(JSON, p);
             } else {
                 requestBody = buildFormData(params);
-                Log.e("lsh", "" + params.toString());
+                Log.e("ljh", "" + params.toString());
                 writeFile("onRequest = " + params.toString());
             }
             builder.post(requestBody);
@@ -228,11 +228,11 @@ public class OkHttpManager {
             if (null != type && type.equals("json")) {
                 String p = mGson.toJson(params);
                 writeFile("onRequest = " + p);
-                Log.e("lsh", "" + p);
+                Log.e("ljh", "" + p);
                 MediaType JSON = MediaType.parse("application/json; charset=utf-8");
                 requestBody = RequestBody.create(JSON, p);
             } else {
-                Log.e("lsh", "" + params.toString());
+                Log.e("ljh", "" + params.toString());
                 writeFile("onRequest = " + params.toString());
                 requestBody = buildFormData(params);
             }

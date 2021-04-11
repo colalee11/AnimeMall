@@ -24,7 +24,7 @@ import com.dlsd.property.base.AppManager;
 import com.dlsd.property.base.BaseActivity;
 import com.dlsd.property.constant.Constants;
 import com.dlsd.property.databinding.ActivityMainBinding;
-import com.dlsd.property.fragments.MainFragment;
+import com.dlsd.property.fragments.UserHomeFragment;
 import com.dlsd.property.fragments.MineFragment;
 import com.dlsd.property.fragments.ShopBusFragment;
 
@@ -67,7 +67,7 @@ public class MainActivity extends BaseActivity {
         // init fragment
         shopBusFragment = new ShopBusFragment();
         mFragments = new ArrayList<>(3);
-        mFragments.add(new MainFragment());
+        mFragments.add(new UserHomeFragment());
         mFragments.add(shopBusFragment);
         mFragments.add(new MineFragment());
         // init view pager

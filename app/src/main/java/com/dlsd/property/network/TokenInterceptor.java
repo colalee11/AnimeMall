@@ -1,10 +1,8 @@
 package com.dlsd.property.network;
 
-import android.content.Intent;
 import android.util.Log;
 
 import com.dlsd.property.MyApp;
-import com.dlsd.property.activitys.base.LoginActivity;
 import com.dlsd.property.constant.UrlConfig;
 import com.dlsd.property.models.response.LoginTokenResp;
 import com.dlsd.property.utils.SPUtil;
@@ -27,7 +25,7 @@ import okhttp3.Response;
 
 public class TokenInterceptor implements Interceptor {
 
-    private static final String TAG = "lsh";
+    private static final String TAG = "ljh";
     private String url = UrlConfig.LOGIN_TOKEN;
 
     @Override
